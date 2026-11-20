@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Inquiry Received</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #060608; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #ffffff;">
+
+  <!-- Main Container -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #060608; padding: 40px 15px;">
+    <tr>
+      <td align="center">
+        
+        <!-- Email Card (Max width 600px - Obsidian Void & Dark Slate Theme) -->
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; background-color: #0d0d12; border: 1px solid #1b1b24; border-radius: 6px; overflow: hidden; box-shadow: 0 16px 40px rgba(0,0,0,0.95);">
+          
+          <!-- Top Accent Bar: High Contrast Monochrome to Emerald Glow -->
+          <tr>
+            <td style="height: 4px; background: linear-gradient(90deg, #ffffff 0%, #10b981 50%, #ffffff 100%);"></td>
+          </tr>
+
+          <!-- Header Section -->
+          <tr>
+            <td style="padding: 32px 36px 22px 36px; border-bottom: 1px solid #1b1b24; background-color: #0d0d12;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td>
+                    <!-- Brand Title -->
+                    <span style="font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #ffffff; display: block; margin-bottom: 6px;">
+                      ⚡ PORTFOLIO DISPATCH
+                    </span>
+                    <h1 style="margin: 0; font-size: 22px; font-weight: 900; color: #ffffff; letter-spacing: -0.5px; text-transform: uppercase;">
+                      New Client Inquiry
+                    </h1>
+                  </td>
+                  <td align="right" valign="top">
+                    <!-- Status Badge -->
+                    <span style="background-color: #10b981; color: #000000; font-size: 10px; font-weight: 900; padding: 4px 10px; border-radius: 3px; text-transform: uppercase; letter-spacing: 1px; display: inline-block;">
+                      LIVE INCOMING
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Sender Details Grid -->
+          <tr>
+            <td style="padding: 24px 36px 12px 36px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #13131a; border: 1px solid #272734; border-radius: 4px; padding: 18px 20px;">
+                <tr>
+                  <td style="padding-bottom: 12px;">
+                    <span style="font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #9090a2; font-weight: 700; display: block; margin-bottom: 3px;">Sender Name</span>
+                    <span style="font-size: 16px; font-weight: 800; color: #ffffff;">{{name}}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-bottom: 12px; border-top: 1px solid #1b1b24; padding-top: 12px;">
+                    <span style="font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #9090a2; font-weight: 700; display: block; margin-bottom: 3px;">Sender Email</span>
+                    <a href="mailto:{{email}}" style="font-size: 15px; font-weight: 700; color: #ffffff; text-decoration: underline;">{{email}}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border-top: 1px solid #1b1b24; padding-top: 12px;">
+                    <span style="font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #9090a2; font-weight: 700; display: block; margin-bottom: 3px;">Subject / Topic</span>
+                    <span style="font-size: 14px; font-weight: 700; color: #e6e6f0;">{{topic}}</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Message Body -->
+          <tr>
+            <td style="padding: 12px 36px 28px 36px;">
+              <span style="font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #9090a2; font-weight: 800; display: block; margin-bottom: 8px;">Message Content</span>
+              <div style="background-color: #13131a; border: 1px solid #272734; border-left: 3px solid #ffffff; border-radius: 3px; padding: 18px 20px; font-size: 14px; line-height: 1.6; color: #ffffff; white-space: pre-line;">
+{{message}}
+              </div>
+            </td>
+          </tr>
+
+          <!-- Quick Action Buttons -->
+          <tr>
+            <td style="padding: 0 36px 32px 36px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td align="center">
+                    <a href="mailto:{{email}}?subject=Re:%20{{topic}}&body=Hi%20{{name}},%0D%0A%0D%0AThank%20you%20for%20reaching%20out!" style="display: inline-block; background-color: #ffffff; color: #000000; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; padding: 14px 30px; text-decoration: none; border-radius: 3px; box-shadow: 0 0 20px rgba(255,255,255,0.4);">
+                      Reply Directly via Email ↗
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 20px 36px; background-color: #060608; border-top: 1px solid #1b1b24; text-align: center;">
+              <p style="margin: 0; font-size: 11px; color: #b8b8cb; letter-spacing: 0.5px; font-weight: 600;">
+                © 2026 KUKARAKSHAN PANCHADSARAM • ALL RIGHTS RESERVED
+              </p>
+              <p style="margin: 4px 0 0 0; font-size: 10px; color: #9090a2;">
+                Homagama, Colombo, Sri Lanka • Available for Global Roles
+              </p>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

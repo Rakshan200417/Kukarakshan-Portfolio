@@ -86,8 +86,8 @@
       right: 0;
       bottom: 0;
       pointer-events: none;
-      box-shadow: inset 0 0 160px rgba(0, 0, 0, 0.95), inset 0 0 250px rgba(6, 6, 8, 0.9);
-      z-index: 99;
+      box-shadow: inset 0 -60px 160px rgba(0, 0, 0, 0.95), inset 0 -120px 250px rgba(6, 6, 8, 0.9);
+      z-index: 10;
     }
 
     ::selection {
@@ -200,6 +200,52 @@
       color: #ffffff;
       text-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 35px rgba(255, 255, 255, 0.5);
     }
+
+    /* Radiant Flash on Header Logo, Brand Name & Nav Links */
+    .nav-flash-item {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .nav-flash-item:hover {
+      text-shadow: 0 0 16px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 45px rgba(255, 255, 255, 0.6);
+      filter: brightness(1.7);
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    /* WhatsApp Button - High Contrast Black Text on Pure White Hover */
+    .nav-btn-whatsapp {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-btn-whatsapp:hover {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      filter: brightness(1.1);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 1), 0 0 45px rgba(255, 255, 255, 0.7) !important;
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    .nav-btn-whatsapp:hover span,
+    .nav-btn-whatsapp:hover i {
+      color: #000000 !important;
+      stroke: #000000 !important;
+    }
+
+    .nav-logo-box {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-logo-box:hover {
+      border-color: #ffffff !important;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.95), 0 0 50px rgba(255, 255, 255, 0.5) !important;
+      filter: brightness(1.6);
+      transform: scale(1.12);
+    }
+
+    .nav-logo-box:hover img {
+      filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1)) brightness(1.4);
+    }
   </style>
 </head>
 
@@ -208,50 +254,45 @@
   <!-- Interactive 3D Background Canvas -->
   <canvas id="three-bg-canvas"></canvas>
 
-  <!-- ================= TOP NAVIGATION BAR WITH LOGO ================= -->
+  <!-- ================= TOP NAVIGATION BAR (PREVIOUS METHOD: STICKY AT TOP) ================= -->
   <header
-    class="w-full border-b border-mono-800/80 bg-mono-950/95 backdrop-blur sticky top-0 px-4 sm:px-8 md:px-12 py-3 text-xs uppercase tracking-widest flex items-center justify-between z-50">
+    class="w-full border-b border-mono-700/80 bg-[#060608]/95 backdrop-blur sticky top-0 px-4 sm:px-8 md:px-12 py-3.5 text-xs uppercase tracking-widest flex items-center justify-between z-50 shadow-[0_4px_30px_rgba(0,0,0,0.9)]">
     <div class="flex items-center gap-3">
-      <!-- User Logo Favicon (Clean & High Contrast) -->
-      <a href="#" class="flex items-center gap-2.5 group">
+      <!-- User Logo Favicon (Clean, High-Contrast & Hover Flash) -->
+      <a href="#" class="flex items-center gap-3.5 group">
         <div
-          class="w-10 h-10 p-1 rounded-md bg-mono-900 border border-white/20 flex items-center justify-center group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(56,189,248,0.5)] transition-all shadow-md">
+          class="nav-logo-box w-11 h-11 p-1 rounded-xl bg-black border-2 border-white flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.7)]">
           <img src="public/logo.png" alt="Rakshan Logo"
-            class="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(56,189,248,0.6)] group-hover:scale-110 transition-transform" />
+            class="w-full h-full object-contain filter brightness-125 contrast-125 drop-shadow-[0_0_12px_rgba(56,189,248,0.9)] transition-all duration-300" />
         </div>
-        <span class="font-display font-bold text-sm tracking-wider text-white hidden sm:inline">KUKARAKSHAN</span>
+        <span class="nav-flash-item font-display font-black text-lg tracking-wider text-white hidden sm:inline drop-shadow-[0_0_16px_rgba(255,255,255,0.9)] cursor-pointer">
+          KUKARAKSHAN
+        </span>
       </a>
     </div>
 
-    <!-- Navigation Links with Interactive Bright Glow Hover -->
-    <nav class="hidden md:flex items-center space-x-6 text-xs font-display font-semibold text-mono-400">
-      <a href="#about"
-        class="hover:text-white hover:brightness-150 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-200">ABOUT</a>
-      <a href="#services"
-        class="hover:text-white hover:brightness-150 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-200">SERVICES</a>
-      <a href="#projects"
-        class="hover:text-white hover:brightness-150 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-200">PROJECTS</a>
-      <a href="#experience"
-        class="hover:text-white hover:brightness-150 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-200">EXPERIENCE</a>
-      <a href="#certificates"
-        class="hover:text-white hover:brightness-150 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-200">CERTIFICATES</a>
-      <a href="#interactive-3d"
-        class="hover:text-white hover:brightness-150 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-200">3D
-        LAB</a>
-      <a href="#contact"
-        class="hover:text-white hover:brightness-150 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-200">CONTACT</a>
+    <!-- Navigation Links -->
+    <nav class="hidden md:flex items-center space-x-7 text-xs font-display font-extrabold text-white tracking-widest">
+      <a href="#about" class="nav-flash-item text-white hover:text-white transition">ABOUT</a>
+      <a href="#services" class="nav-flash-item text-white hover:text-white transition">SERVICES</a>
+      <a href="#projects" class="nav-flash-item text-white hover:text-white transition">PROJECTS</a>
+      <a href="#experience" class="nav-flash-item text-white hover:text-white transition">EXPERIENCE</a>
+      <a href="#certificates" class="nav-flash-item text-white hover:text-white transition">CERTIFICATES</a>
+      <a href="#interactive-3d" class="nav-flash-item text-white hover:text-white transition">3D LAB</a>
+      <a href="#contact" class="nav-flash-item text-white hover:text-white transition">CONTACT</a>
     </nav>
 
+    <!-- Action Buttons -->
     <div class="flex items-center gap-3">
       <a href="public/Kukarakshan_CV.pdf" download="Kukarakshan_CV.pdf"
-        class="inline-flex items-center gap-1.5 px-3 py-1.5 border border-mono-700 hover:border-white hover:text-white hover:shadow-[0_0_12px_rgba(255,255,255,0.6)] transition-all text-[11px] font-display rounded-sm">
-        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+        class="inline-flex items-center gap-1.5 px-3.5 py-2 border-2 border-white bg-mono-900 text-white font-black hover:bg-white hover:text-black hover:shadow-[0_0_25px_rgba(255,255,255,1)] text-xs font-display rounded-sm shadow-md transition-all">
+        <i data-lucide="download" class="w-4 h-4"></i>
         <span>CV (PDF)</span>
       </a>
       <a href="https://wa.me/94756027337?text=Hello%20Kukarakshan!" target="_blank" rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white text-black hover:bg-white hover:shadow-[0_0_15px_rgba(255,255,255,0.9)] hover:scale-105 transition-all text-[11px] font-display font-bold rounded-sm">
-        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
-        <span>WHATSAPP</span>
+        class="nav-btn-whatsapp inline-flex items-center gap-1.5 px-3.5 py-2 bg-white text-black border-2 border-white text-xs font-display font-black rounded-sm shadow-[0_0_20px_rgba(255,255,255,0.7)]">
+        <i data-lucide="message-circle" class="w-4 h-4 text-black"></i>
+        <span class="text-black font-extrabold">WHATSAPP</span>
       </a>
     </div>
   </header>
