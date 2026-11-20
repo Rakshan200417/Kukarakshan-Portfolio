@@ -45,7 +45,6 @@ export default function Hero() {
               className="hero-drop-shadow max-h-full w-auto object-contain object-bottom pointer-events-auto transform hover:scale-105 transition-transform duration-500 scale-100 sm:scale-115 md:scale-130 origin-bottom translate-y-0"
               loading="eager"
             />
-            <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-mono-950 via-mono-950/80 to-transparent pointer-events-none"></div>
           </div>
         </div>
 
