@@ -31,15 +31,29 @@ export default function Hero() {
       </div>
 
       {/* Hero Content: 3-Column Layered Grid */}
-      <div className="relative w-full -mt-20 sm:-mt-28 md:-mt-36 z-10 grid grid-cols-1 md:grid-cols-12 items-end min-h-[480px] sm:min-h-[540px] md:min-h-[600px]">
-        {/* Monochrome Celestial Disc Backdrop */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[45%] w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-mono-900 via-mono-800 to-mono-700 -z-10 shadow-[0_0_90px_rgba(255,255,255,0.12)] border border-mono-700/60 pointer-events-none"></div>
+      <div className="relative w-full -mt-14 sm:-mt-24 md:-mt-36 z-10 grid grid-cols-1 md:grid-cols-12 items-end min-h-[420px] sm:min-h-[500px] md:min-h-[600px] gap-8 md:gap-0">
+        {/* Monochrome Celestial Disc Backdrop (Centered behind hero cutout) */}
+        <div className="absolute left-1/2 top-1/4 sm:top-1/3 md:top-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-mono-900 via-mono-800 to-mono-700 -z-10 shadow-[0_0_90px_rgba(255,255,255,0.12)] border border-mono-700/60 pointer-events-none"></div>
 
-        {/* LEFT COLUMN */}
+        {/* CENTER COLUMN (ON MOBILE: Top Hero Image; ON DESKTOP: Center) */}
+        <div className="gs-reveal-center md:col-span-4 relative flex flex-col items-center justify-end order-1 md:order-2 h-[340px] sm:h-[420px] md:h-[530px] pointer-events-none mb-2 md:mb-0">
+          <div className="relative w-full h-full flex items-end justify-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/hero.png"
+              alt="Panchadsaram Kukarakshan"
+              className="hero-drop-shadow max-h-full w-auto object-contain object-bottom pointer-events-auto transform hover:scale-105 transition-transform duration-500 scale-100 sm:scale-115 md:scale-130 origin-bottom translate-y-0"
+              loading="eager"
+            />
+            <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-mono-950 via-mono-950/80 to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+
+        {/* LEFT COLUMN: Core Identity */}
         <div className="gs-reveal-left md:col-span-4 flex flex-col justify-end pb-4 space-y-5 order-2 md:order-1 text-left">
           <div>
             <span className="text-xs font-display text-mono-200 uppercase tracking-widest block mb-1 font-semibold">CORE IDENTITY</span>
-            <h2 className="font-anton text-3xl sm:text-4xl lg:text-[2.6rem] tracking-wide text-white uppercase leading-[1.08]">
+            <h2 className="font-anton text-2xl sm:text-3xl lg:text-[2.6rem] tracking-wide text-white uppercase leading-[1.08]">
               FULL STACK DEVELOPER<br />
               <span className="text-mono-200">WITH AI KNOWLEDGE</span>
             </h2>
@@ -67,20 +81,6 @@ export default function Hero() {
               <span>GET IN TOUCH</span>
               <ArrowUpRight className="w-4 h-4" />
             </a>
-          </div>
-        </div>
-
-        {/* CENTER COLUMN: Hero Cutout */}
-        <div className="gs-reveal-center md:col-span-4 relative flex flex-col items-center justify-end order-1 md:order-2 h-[420px] sm:h-[480px] md:h-[530px] pointer-events-none">
-          <div className="relative w-full h-full flex items-end justify-center">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/hero.png"
-              alt="Panchadsaram Kukarakshan"
-              className="hero-drop-shadow max-h-full w-auto object-contain object-bottom pointer-events-auto transform hover:scale-105 transition-transform duration-500 scale-110 sm:scale-120 md:scale-130 origin-bottom translate-y-0"
-              loading="eager"
-            />
-            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-mono-950 via-mono-950/80 to-transparent pointer-events-none"></div>
           </div>
         </div>
 
