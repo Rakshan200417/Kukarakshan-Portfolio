@@ -268,7 +268,7 @@ export default function BentoSections() {
             >
               <div className="aspect-video w-full bg-black overflow-hidden relative">
                 <Image
-                  src="/public/images/proj-dd-photography.png"
+                  src="/images/proj-dd-photography.png"
                   alt="DD Photography 95"
                   width={800}
                   height={450}
@@ -295,7 +295,7 @@ export default function BentoSections() {
             >
               <div className="aspect-video w-full bg-black overflow-hidden relative">
                 <Image
-                  src="/public/images/proj-ceylon-panorama.png"
+                  src="/images/proj-ceylon-panorama.png"
                   alt="Ceylon Panorama"
                   width={800}
                   height={450}
@@ -322,7 +322,7 @@ export default function BentoSections() {
             >
               <div className="aspect-video w-full bg-black overflow-hidden relative">
                 <Image
-                  src="/public/images/proj-findmymeds.png"
+                  src="/images/proj-findmymeds.png"
                   alt="Find MyMeds"
                   width={800}
                   height={450}
@@ -349,7 +349,7 @@ export default function BentoSections() {
             >
               <div className="aspect-video w-full bg-black overflow-hidden relative">
                 <Image
-                  src="/public/images/proj-trio-treats.jpg"
+                  src="/images/proj-trio-treats.jpg"
                   alt="Trio Treats"
                   width={800}
                   height={450}
@@ -418,7 +418,7 @@ export default function BentoSections() {
             <div className="flex items-start gap-4">
               <div className="w-24 h-28 flex-shrink-0 border border-mono-700 overflow-hidden bg-mono-850 shadow-[0_0_15px_rgba(255,255,255,0.1)] rounded-sm relative">
                 <Image
-                  src="/public/images/about.png"
+                  src="/images/about.png"
                   alt="Kukarakshan Panchadsaram"
                   width={96}
                   height={112}
@@ -629,7 +629,7 @@ export default function BentoSections() {
             <div>
               <div className="aspect-[4/3] w-full bg-mono-900 overflow-hidden relative border-b border-mono-800">
                 <Image
-                  src="/public/certificates/cert-cognitiveai.png"
+                  src="/certificates/cert-cognitiveai.png"
                   alt="Python for Beginners - CognitiveAI"
                   width={600}
                   height={450}
@@ -647,7 +647,7 @@ export default function BentoSections() {
             </div>
             <div className="p-5 pt-0">
               <a
-                href="/public/certificates/certificate 1 cognitvieai class python for beginners.pdf"
+                href="/certificates/certificate 1 cognitvieai class python for beginners.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-2.5 px-3 bg-mono-900 border border-mono-700 hover:border-white text-center text-white text-xs font-display font-semibold transition flex items-center justify-center gap-2 rounded-sm group-hover:bg-white group-hover:text-black"
@@ -662,7 +662,7 @@ export default function BentoSections() {
             <div>
               <div className="aspect-[4/3] w-full bg-mono-900 overflow-hidden relative border-b border-mono-800">
                 <Image
-                  src="/public/certificates/cert-uom.png"
+                  src="/certificates/cert-uom.png"
                   alt="Python for Beginners - University of Moratuwa"
                   width={600}
                   height={450}
@@ -680,7 +680,7 @@ export default function BentoSections() {
             </div>
             <div className="p-5 pt-0">
               <a
-                href="/public/certificates/Certificate 2 Uom Python for Beginners.pdf"
+                href="/certificates/Certificate 2 Uom Python for Beginners.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-2.5 px-3 bg-mono-900 border border-mono-700 hover:border-white text-center text-white text-xs font-display font-semibold transition flex items-center justify-center gap-2 rounded-sm group-hover:bg-white group-hover:text-black"
@@ -695,7 +695,7 @@ export default function BentoSections() {
             <div>
               <div className="aspect-[4/3] w-full bg-mono-900 overflow-hidden relative border-b border-mono-800">
                 <Image
-                  src="/public/certificates/TechMath.jpg"
+                  src="/certificates/TechMath.jpg"
                   alt="TechMath Competition"
                   width={600}
                   height={450}
@@ -713,7 +713,7 @@ export default function BentoSections() {
             </div>
             <div className="p-5 pt-0">
               <a
-                href="/public/certificates/TechMath.jpg"
+                href="/certificates/TechMath.jpg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-2.5 px-3 bg-mono-900 border border-mono-700 hover:border-white text-center text-white text-xs font-display font-semibold transition flex items-center justify-center gap-2 rounded-sm group-hover:bg-white group-hover:text-black"

@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   title: 'Panchadsaram Kukarakshan | Software Engineer & Full Stack Developer',
   description: 'Portfolio of Panchadsaram Kukarakshan — Software Engineer Undergraduate at NSBM Green University, Full Stack Developer, AI & Three.js 3D Builder.',
   icons: {
-    icon: '/public/favicon.png',
+    icon: '/favicon.png',
   },
 };
 

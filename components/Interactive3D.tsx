@@ -143,7 +143,7 @@ export default function Interactive3D() {
 
     const loader = new GLTFLoader();
     loader.load(
-      '/public/earth.glb',
+      '/earth.glb',
       (gltf) => {
         const model = gltf.scene;
         const box = new THREE.Box3().setFromObject(model);
@@ -172,7 +172,7 @@ export default function Interactive3D() {
       () => {
         const fbGeo = new THREE.SphereGeometry(R, 64, 64);
         const fbMat = new THREE.MeshStandardMaterial({
-          map: new THREE.TextureLoader().load('/public/images/earth_map.jpg'),
+          map: new THREE.TextureLoader().load('/images/earth_map.jpg'),
           roughness: 0.6,
         });
         globeGroup.add(new THREE.Mesh(fbGeo, fbMat));
@@ -363,7 +363,7 @@ export default function Interactive3D() {
           >
             <div className="aspect-video w-full bg-black overflow-hidden relative border-b border-mono-800">
               <Image
-                src="/public/images/proj-dd-photography.png"
+                src="/images/proj-dd-photography.png"
                 alt="DD Photography 95 Live Frontend"
                 width={800}
                 height={450}
@@ -402,7 +402,7 @@ export default function Interactive3D() {
           >
             <div className="aspect-video w-full bg-black overflow-hidden relative border-b border-mono-800">
               <Image
-                src="/public/images/proj-trio-treats.jpg"
+                src="/images/proj-trio-treats.jpg"
                 alt="Trio Treats Live Frontend"
                 width={800}
                 height={450}

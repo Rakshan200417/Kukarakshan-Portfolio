@@ -191,7 +191,7 @@ export default function Contact() {
               >
                 <div className="w-24 h-24 bg-white p-1 rounded-md flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:ring-2 group-hover:ring-white transition-all relative">
                   <Image
-                    src="/public/qr-linkedin.png"
+                    src="/qr-linkedin.png"
                     alt="LinkedIn QR Code"
                     width={88}
                     height={88}
@@ -211,7 +211,7 @@ export default function Contact() {
               >
                 <div className="w-24 h-24 bg-white p-1 rounded-md flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:ring-2 group-hover:ring-white transition-all relative">
                   <Image
-                    src="/public/qr-github.png"
+                    src="/qr-github.png"
                     alt="GitHub QR Code"
                     width={88}
                     height={88}

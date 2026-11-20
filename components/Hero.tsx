@@ -142,7 +142,7 @@ export default function Hero() {
 
           <div className="flex items-center gap-2 pt-1 font-display text-xs">
             <a
-              href="/public/Kukarakshan_CV.pdf"
+              href="/Kukarakshan_CV.pdf"
               download="Kukarakshan_CV.pdf"
               className="flex-1 py-3 px-3 border border-mono-700 hover:border-white text-center text-white hover:bg-white hover:text-black transition flex items-center justify-center gap-2 font-bold rounded-sm"
             >
