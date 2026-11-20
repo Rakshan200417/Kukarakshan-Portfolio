@@ -75,7 +75,7 @@ export default function Hero() {
           <div className="relative w-full h-full flex items-end justify-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/public/images/hero.png"
+              src="/images/hero.png"
               alt="Panchadsaram Kukarakshan"
               className="hero-drop-shadow max-h-full w-auto object-contain object-bottom pointer-events-auto transform hover:scale-105 transition-transform duration-500 scale-110 sm:scale-120 md:scale-130 origin-bottom translate-y-0"
               loading="eager"
