@@ -54,7 +54,7 @@ export default function BentoSections() {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col gap-12 sm:gap-16 md:gap-20">
       {/* ================= WHAT I DO ================= */}
       <section id="services" className="border border-mono-800 bg-mono-900/80 backdrop-blur p-6 sm:p-8 rounded-sm">
         <div className="mb-6 flex items-center justify-between border-b border-mono-800 pb-3">
@@ -464,18 +464,33 @@ export default function BentoSections() {
 
             <div className="mb-4">
               <span className="text-[10px] font-display text-mono-400 uppercase tracking-widest block mb-2">AI DEV STACK</span>
-              <div className="grid grid-cols-3 gap-2">
-                <div className="tilt-card p-2.5 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-white transition rounded-sm">
-                  <span className="text-sm font-bold text-white">⚡</span>
-                  <span className="text-[11px] font-display text-white mt-1">Claude Code</span>
+              <div className="grid grid-cols-3 gap-2.5">
+                {/* Claude Code */}
+                <div className="tilt-card p-3 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-[#d97706] hover:shadow-[0_0_15px_rgba(217,119,6,0.25)] transition group rounded-sm">
+                  <div className="w-8 h-8 rounded-md bg-[#d97706]/10 border border-[#d97706]/30 flex items-center justify-center mb-1.5 group-hover:scale-110 transition-transform">
+                    <svg className="w-4 h-4 fill-[#f59e0b]" viewBox="0 0 24 24">
+                      <path d="M12 2L4 14h6l-2 8 10-12h-6l4-8z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs font-display font-bold text-white">Claude Code</span>
                 </div>
-                <div className="tilt-card p-2.5 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-white transition rounded-sm">
-                  <span className="text-sm font-bold text-white">▲</span>
-                  <span className="text-[11px] font-display text-white mt-1">Antigravity</span>
+
+                {/* Google Antigravity */}
+                <div className="tilt-card p-3 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-[#38bdf8] hover:shadow-[0_0_15px_rgba(56,189,248,0.25)] transition group rounded-sm">
+                  <div className="w-8 h-8 rounded-md bg-[#38bdf8]/10 border border-[#38bdf8]/30 flex items-center justify-center mb-1.5 group-hover:scale-110 transition-transform">
+                    <svg className="w-4 h-4 fill-[#38bdf8]" viewBox="0 0 24 24">
+                      <path d="M12 2L1 21h22L12 2zm0 5l6.5 11h-13L12 7z" />
+                    </svg>
+                  </div>
+                  <span className="text-xs font-display font-bold text-white">Antigravity</span>
                 </div>
-                <div className="tilt-card p-2.5 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-white transition rounded-sm">
-                  <span className="text-sm font-bold text-white">🤖</span>
-                  <span className="text-[11px] font-display text-white mt-1">GitHub Copilot</span>
+
+                {/* GitHub Copilot */}
+                <div className="tilt-card p-3 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-[#a855f7] hover:shadow-[0_0_15px_rgba(168,85,247,0.25)] transition group rounded-sm">
+                  <div className="w-8 h-8 rounded-md bg-[#a855f7]/10 border border-[#a855f7]/30 flex items-center justify-center mb-1.5 group-hover:scale-110 transition-transform">
+                    <i className="fa-brands fa-github text-[#c084fc] text-lg"></i>
+                  </div>
+                  <span className="text-xs font-display font-bold text-white">GitHub Copilot</span>
                 </div>
               </div>
             </div>
@@ -483,33 +498,72 @@ export default function BentoSections() {
             <div>
               <span className="text-[10px] font-display text-mono-400 uppercase tracking-widest block mb-2">ENGINEERING TOOLS</span>
               <div className="grid grid-cols-4 sm:grid-cols-7 gap-2">
-                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-white transition rounded-sm">
-                  <span className="text-xs font-bold text-white">⚛</span>
-                  <span className="text-[10px] font-display text-mono-300 mt-1">React</span>
+                {/* React */}
+                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-[#61dafb] hover:shadow-[0_0_15px_rgba(97,218,251,0.25)] transition group rounded-sm">
+                  <div className="w-7 h-7 flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
+                    <i className="fa-brands fa-react text-[#61dafb] text-lg"></i>
+                  </div>
+                  <span className="text-[10px] font-display text-mono-200">React</span>
                 </div>
-                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-white transition rounded-sm">
-                  <span className="text-xs font-bold text-white">▲</span>
-                  <span className="text-[10px] font-display text-mono-300 mt-1">Next.js</span>
+
+                {/* Next.js */}
+                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-white hover:shadow-[0_0_15px_rgba(255,255,255,0.25)] transition group rounded-sm">
+                  <div className="w-7 h-7 flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
+                    <svg className="w-4 h-4 fill-white" viewBox="0 0 180 180">
+                      <path d="M90 0a90 90 0 1090 90A90 90 0 0090 0zm37.8 134.1l-44.5-57.4v40.3H72V52.7h13.2l42.6 54.8V52.7h11.3v81.4h-11.3z" />
+                    </svg>
+                  </div>
+                  <span className="text-[10px] font-display text-mono-200">Next.js</span>
                 </div>
-                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-white transition rounded-sm">
-                  <span className="text-xs font-bold text-white">☕</span>
-                  <span className="text-[10px] font-display text-mono-300 mt-1">Spring</span>
+
+                {/* Spring Boot */}
+                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-[#6db33f] hover:shadow-[0_0_15px_rgba(109,179,63,0.25)] transition group rounded-sm">
+                  <div className="w-7 h-7 flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
+                    <svg className="w-4 h-4 fill-[#6db33f]" viewBox="0 0 24 24">
+                      <path d="M21.5 10.7a8.7 8.7 0 00-6.1-8.2C10.6 1.1 5.9 4 4.1 8.3a9.8 9.8 0 00.3 8.8 8.8 8.8 0 008.2 4.4c5.1-.2 9-4.7 8.9-9.8v-1zM12 18.5a6.5 6.5 0 01-6.5-6.5c0-1.7.7-3.3 1.9-4.5 1.2-1.2 2.8-1.9 4.6-1.9 3.6 0 6.5 2.9 6.5 6.5 0 3.6-2.9 6.4-6.5 6.4z" />
+                    </svg>
+                  </div>
+                  <span className="text-[10px] font-display text-mono-200">Spring</span>
                 </div>
-                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-white transition rounded-sm">
-                  <span className="text-xs font-bold text-white">✦</span>
-                  <span className="text-[10px] font-display text-mono-300 mt-1">Flutter</span>
+
+                {/* Flutter */}
+                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-[#02569b] hover:shadow-[0_0_15px_rgba(2,86,155,0.3)] transition group rounded-sm">
+                  <div className="w-7 h-7 flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
+                    <svg className="w-4 h-4 fill-[#02569b]" viewBox="0 0 24 24">
+                      <path d="M14.314 0L2.3 12 6 15.7 21.684 0h-7.37zM6 15.7l5.657 5.657L21.684 7.37H14.314L6 15.7zm5.657 5.657L14.314 24h7.37l-5.657-5.657-4.37 3.014z" />
+                    </svg>
+                  </div>
+                  <span className="text-[10px] font-display text-mono-200">Flutter</span>
                 </div>
-                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-white transition rounded-sm">
-                  <span className="text-xs font-bold text-white">◬</span>
-                  <span className="text-[10px] font-display text-mono-300 mt-1">Three.js</span>
+
+                {/* Three.js */}
+                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-white hover:shadow-[0_0_15px_rgba(255,255,255,0.25)] transition group rounded-sm">
+                  <div className="w-7 h-7 flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
+                    <svg className="w-4 h-4 stroke-white fill-none stroke-[1.8]" viewBox="0 0 24 24">
+                      <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+                      <path d="M3.27 6.96L12 12.01l8.73-5.05" />
+                      <path d="M12 22.08V12" />
+                    </svg>
+                  </div>
+                  <span className="text-[10px] font-display text-mono-200">Three.js</span>
                 </div>
-                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-white transition rounded-sm">
-                  <span className="text-xs font-bold text-white">☵</span>
-                  <span className="text-[10px] font-display text-mono-300 mt-1">MySQL</span>
+
+                {/* MySQL */}
+                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-[#00758f] hover:shadow-[0_0_15px_rgba(0,117,143,0.3)] transition group rounded-sm">
+                  <div className="w-7 h-7 flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
+                    <i className="fa-solid fa-database text-[#00758f] text-base"></i>
+                  </div>
+                  <span className="text-[10px] font-display text-mono-200">MySQL</span>
                 </div>
-                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-white transition rounded-sm">
-                  <span className="text-xs font-bold text-white">Ps</span>
-                  <span className="text-[10px] font-display text-mono-300 mt-1">Photoshop</span>
+
+                {/* Photoshop */}
+                <div className="tilt-card p-2 bg-mono-850 border border-mono-800 text-center flex flex-col items-center justify-center hover:border-[#31a8ff] hover:shadow-[0_0_15px_rgba(49,168,255,0.3)] transition group rounded-sm">
+                  <div className="w-7 h-7 flex items-center justify-center mb-1 group-hover:scale-110 transition-transform">
+                    <div className="w-5 h-5 rounded-sm bg-[#001e36] border border-[#31a8ff] flex items-center justify-center text-[10px] font-bold text-[#31a8ff] font-sans">
+                      Ps
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-display text-mono-200">Photoshop</span>
                 </div>
               </div>
             </div>
@@ -725,6 +779,6 @@ export default function BentoSections() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

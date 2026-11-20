@@ -10,7 +10,7 @@ export default function Hero() {
   const rotAnglesLast = [-1.2, 0.8, -0.5, 1, -1, 0.6, -0.8, 1.2, -0.6, 1, -1];
 
   return (
-    <section id="hero-section" className="relative w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 pt-8 pb-10 overflow-hidden z-10">
+    <section id="hero-section" className="relative w-full mx-auto pt-4 pb-6 overflow-hidden z-10">
       {/* Edge-To-Edge "PORTFOLIO" in Anton (z-0 behind person) */}
       <div className="w-full relative z-0 select-none pointer-events-none pt-4">
         <svg viewBox="0 0 1000 160" className="hero-title-svg" preserveAspectRatio="none">

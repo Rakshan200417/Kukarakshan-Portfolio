@@ -15,8 +15,8 @@ export default function Home() {
       {/* High-Contrast Sticky Navigation Header */}
       <Header />
 
-      {/* Main Single-Page App Container */}
-      <main className="relative z-10 flex flex-col">
+      {/* Main Single-Page App Container with left/right page margins and vertical spacing between sections */}
+      <main className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-12 flex flex-col gap-12 sm:gap-16 md:gap-20 pb-20">
         {/* Hero Section */}
         <Hero />
 
