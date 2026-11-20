@@ -4,7 +4,7 @@ import { Download, MessageCircle } from 'lucide-react';
 
 export default function Header() {
   return (
-    <header className="w-full border-b border-mono-700/80 bg-[#060608]/95 backdrop-blur sticky top-0 px-4 sm:px-8 md:px-12 py-3.5 text-xs uppercase tracking-widest flex items-center justify-between z-50 shadow-[0_4px_30px_rgba(0,0,0,0.9)]">
+    <header className="fixed top-0 left-0 right-0 w-full border-b border-mono-700/80 bg-[#060608]/90 backdrop-blur-md px-4 sm:px-8 md:px-12 py-3.5 text-xs uppercase tracking-widest flex items-center justify-between z-50 shadow-[0_4px_30px_rgba(0,0,0,0.95)] transition-all">
       <div className="flex items-center gap-3">
         <Link href="#" className="flex items-center gap-3.5 group">
           <div className="w-11 h-11 p-1 rounded-xl bg-black border-2 border-white flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.7)]">

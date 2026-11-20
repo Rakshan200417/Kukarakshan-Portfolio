@@ -10,15 +10,15 @@ import ScrollAnimationProvider from '@/components/ScrollAnimationProvider';
 export default function Home() {
   return (
     <ScrollAnimationProvider>
-      <div className="relative min-h-screen bg-[#060608] text-[#e6e6f0] overflow-x-hidden selection:bg-white selection:text-black font-sans">
+      <div className="relative min-h-screen bg-[#060608] text-[#e6e6f0] selection:bg-white selection:text-black font-sans">
         {/* Three.js Starlight Particle Mesh Background */}
         <ThreeBackground />
 
-        {/* High-Contrast Sticky Navigation Header */}
+        {/* High-Contrast Fixed Floating Navigation Header */}
         <Header />
 
-        {/* Main Single-Page App Container with left/right page margins and vertical spacing between sections */}
-        <main className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-12 flex flex-col gap-12 sm:gap-16 md:gap-20 pb-20">
+        {/* Main Single-Page App Container with left/right page margins and vertical spacing between sections (pt-20 for fixed header clearance) */}
+        <main className="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-10 lg:px-12 flex flex-col gap-12 sm:gap-16 md:gap-20 pt-20 pb-20">
           {/* Hero Section */}
           <Hero />
 
