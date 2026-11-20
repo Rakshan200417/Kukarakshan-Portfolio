@@ -41,14 +41,14 @@ export default function Interactive3D() {
     resize();
     window.addEventListener('resize', resize);
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
     scene.add(ambientLight);
 
-    const keySun = new THREE.DirectionalLight(0xffffff, 2.5);
+    const keySun = new THREE.DirectionalLight(0xffffff, 1.8);
     keySun.position.set(6, 4, 5);
     scene.add(keySun);
 
-    const fillLight = new THREE.DirectionalLight(0x88bbff, 1.2);
+    const fillLight = new THREE.DirectionalLight(0x88bbff, 0.6);
     fillLight.position.set(-6, -2, -3);
     scene.add(fillLight);
 
@@ -141,6 +141,9 @@ export default function Interactive3D() {
     globeGroup.rotation.y = TARGET_ROT_Y;
     globeGroup.rotation.x = TARGET_ROT_X;
 
+    const textureLoader = new THREE.TextureLoader();
+    const backupEarthMap = textureLoader.load('/images/earth_map.jpg');
+
     const loader = new GLTFLoader();
     loader.load(
       '/earth.glb',
@@ -161,8 +164,17 @@ export default function Interactive3D() {
           if ((child as THREE.Mesh).isMesh) {
             const m = child as THREE.Mesh;
             if (m.material) {
-              (m.material as THREE.MeshStandardMaterial).roughness = 0.55;
-              (m.material as THREE.MeshStandardMaterial).metalness = 0.2;
+              const mat = m.material as THREE.MeshStandardMaterial;
+              if (!mat.map) {
+                mat.map = backupEarthMap;
+              }
+              mat.roughness = 0.65;
+              mat.metalness = 0.1;
+              if (mat.map) {
+                mat.map.anisotropy = 8;
+                mat.map.needsUpdate = true;
+              }
+              mat.needsUpdate = true;
             }
           }
         });
@@ -172,8 +184,9 @@ export default function Interactive3D() {
       () => {
         const fbGeo = new THREE.SphereGeometry(R, 64, 64);
         const fbMat = new THREE.MeshStandardMaterial({
-          map: new THREE.TextureLoader().load('/images/earth_map.jpg'),
+          map: backupEarthMap,
           roughness: 0.6,
+          metalness: 0.1,
         });
         globeGroup.add(new THREE.Mesh(fbGeo, fbMat));
       }
@@ -204,6 +217,30 @@ export default function Interactive3D() {
     canvas.addEventListener('mousedown', onMouseDown);
     window.addEventListener('mouseup', onMouseUp);
     canvas.addEventListener('mousemove', onMouseMove);
+
+    // Touch events for mobile responsiveness
+    const onTouchStart = (e: TouchEvent) => {
+      if (e.touches.length === 1) {
+        isDragging = true;
+        autoRotate = false;
+        prevMousePos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+      }
+    };
+    const onTouchEnd = () => { isDragging = false; };
+    const onTouchMove = (e: TouchEvent) => {
+      if (!isDragging || e.touches.length !== 1) return;
+      const deltaX = e.touches[0].clientX - prevMousePos.x;
+      const deltaY = e.touches[0].clientY - prevMousePos.y;
+      globeGroup.rotation.y += deltaX * 0.006;
+      globeGroup.rotation.x += deltaY * 0.006;
+      rotVelocity.y = deltaX * 0.0015;
+      rotVelocity.x = deltaY * 0.0015;
+      prevMousePos = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    };
+
+    canvas.addEventListener('touchstart', onTouchStart, { passive: true });
+    window.addEventListener('touchend', onTouchEnd);
+    canvas.addEventListener('touchmove', onTouchMove, { passive: true });
 
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
@@ -270,6 +307,9 @@ export default function Interactive3D() {
       window.removeEventListener('mouseup', onMouseUp);
       canvas.removeEventListener('mousemove', onMouseMove);
       canvas.removeEventListener('wheel', onWheel);
+      canvas.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchend', onTouchEnd);
+      canvas.removeEventListener('touchmove', onTouchMove);
       focusBtn?.removeEventListener('click', handleFocus);
       orbitBtn?.removeEventListener('click', handleOrbitToggle);
       renderer.dispose();
