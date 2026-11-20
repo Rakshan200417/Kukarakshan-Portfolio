@@ -180,16 +180,40 @@ export default function Contact() {
         <div className="lg:col-span-3 flex flex-col justify-between space-y-6">
           <div>
             <span className="text-[10px] font-display text-mono-400 uppercase tracking-widest block mb-3">
-              SCAN TO CONNECT
+              SCAN TO CONNECT &amp; SHARE
             </span>
-            <div className="flex items-center gap-4">
+            <div className="grid grid-cols-3 gap-3">
+              {/* Portfolio QR */}
+              <a
+                href="https://kukarakshan-portfolio.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-center group block"
+                title="Scan to open Live Portfolio"
+              >
+                <div className="w-full aspect-square bg-white p-1 rounded-md flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:ring-2 group-hover:ring-white transition-all relative">
+                  <Image
+                    src="/qr-portfolio.png"
+                    alt="Portfolio QR Code"
+                    width={88}
+                    height={88}
+                    className="object-contain"
+                  />
+                </div>
+                <span className="text-[10px] font-display text-mono-200 uppercase block mt-1.5 group-hover:text-white font-bold transition truncate">
+                  PORTFOLIO
+                </span>
+              </a>
+
+              {/* LinkedIn QR */}
               <a
                 href="https://www.linkedin.com/in/kukarakshan-panchadsaram-84709b350"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-center group block"
+                title="LinkedIn Profile"
               >
-                <div className="w-24 h-24 bg-white p-1 rounded-md flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:ring-2 group-hover:ring-white transition-all relative">
+                <div className="w-full aspect-square bg-white p-1 rounded-md flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:ring-2 group-hover:ring-white transition-all relative">
                   <Image
                     src="/qr-linkedin.png"
                     alt="LinkedIn QR Code"
@@ -198,18 +222,20 @@ export default function Contact() {
                     className="object-contain"
                   />
                 </div>
-                <span className="text-[10px] font-display text-mono-200 uppercase block mt-1.5 group-hover:text-white font-bold transition">
+                <span className="text-[10px] font-display text-mono-200 uppercase block mt-1.5 group-hover:text-white font-bold transition truncate">
                   LINKEDIN
                 </span>
               </a>
 
+              {/* GitHub QR */}
               <a
                 href="https://github.com/Rakshan200417"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-center group block"
+                title="GitHub Profile"
               >
-                <div className="w-24 h-24 bg-white p-1 rounded-md flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:ring-2 group-hover:ring-white transition-all relative">
+                <div className="w-full aspect-square bg-white p-1 rounded-md flex items-center justify-center shadow-lg group-hover:scale-105 group-hover:ring-2 group-hover:ring-white transition-all relative">
                   <Image
                     src="/qr-github.png"
                     alt="GitHub QR Code"
@@ -218,7 +244,7 @@ export default function Contact() {
                     className="object-contain"
                   />
                 </div>
-                <span className="text-[10px] font-display text-mono-200 uppercase block mt-1.5 group-hover:text-white font-bold transition">
+                <span className="text-[10px] font-display text-mono-200 uppercase block mt-1.5 group-hover:text-white font-bold transition truncate">
                   GITHUB
                 </span>
               </a>
