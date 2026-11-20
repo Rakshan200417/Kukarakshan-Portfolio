@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section id="hero-section" className="relative w-full mx-auto pt-4 pb-6 overflow-hidden z-10">
       {/* Edge-To-Edge "PORTFOLIO" in Anton (z-0 behind person) */}
-      <div className="w-full relative z-0 select-none pointer-events-none pt-4">
+      <div className="w-full relative z-0 select-none pointer-events-none pt-4 gs-reveal-hero-title">
         <svg viewBox="0 0 1000 160" className="hero-title-svg" preserveAspectRatio="none">
           <text
             x="500"
@@ -36,7 +36,7 @@ export default function Hero() {
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[45%] w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-mono-900 via-mono-800 to-mono-700 -z-10 shadow-[0_0_90px_rgba(255,255,255,0.12)] border border-mono-700/60 pointer-events-none"></div>
 
         {/* LEFT COLUMN */}
-        <div className="md:col-span-4 flex flex-col justify-end pb-4 space-y-5 order-2 md:order-1 text-left">
+        <div className="gs-reveal-left md:col-span-4 flex flex-col justify-end pb-4 space-y-5 order-2 md:order-1 text-left">
           <div>
             <span className="text-xs font-display text-mono-200 uppercase tracking-widest block mb-1 font-semibold">CORE IDENTITY</span>
             <h2 className="font-anton text-3xl sm:text-4xl lg:text-[2.6rem] tracking-wide text-white uppercase leading-[1.08]">
@@ -71,7 +71,7 @@ export default function Hero() {
         </div>
 
         {/* CENTER COLUMN: Hero Cutout */}
-        <div className="md:col-span-4 relative flex flex-col items-center justify-end order-1 md:order-2 h-[420px] sm:h-[480px] md:h-[530px] pointer-events-none">
+        <div className="gs-reveal-center md:col-span-4 relative flex flex-col items-center justify-end order-1 md:order-2 h-[420px] sm:h-[480px] md:h-[530px] pointer-events-none">
           <div className="relative w-full h-full flex items-end justify-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -85,7 +85,7 @@ export default function Hero() {
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="md:col-span-4 flex flex-col justify-end pb-4 space-y-4 order-3 text-left min-w-0">
+        <div className="gs-reveal-right md:col-span-4 flex flex-col justify-end pb-4 space-y-4 order-3 text-left min-w-0">
           <div className="min-w-0">
             <div className="font-syne font-extrabold uppercase tracking-tight select-none">
               <div className="text-sm sm:text-base text-mono-300 font-bold tracking-wider leading-none">
